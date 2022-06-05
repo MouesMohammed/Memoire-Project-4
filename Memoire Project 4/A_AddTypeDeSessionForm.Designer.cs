@@ -1,0 +1,143 @@
+﻿
+namespace Memoire_Project_4
+{
+    partial class A_AddTypeDeSessionForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(A_AddTypeDeSessionForm));
+            this.panelNewEmployee = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxNewDesignation = new System.Windows.Forms.TextBox();
+            this.AddNewCommuneSauvegarder = new System.Windows.Forms.Button();
+            this.textBoxNewCodeTypSes = new System.Windows.Forms.TextBox();
+            this.Labelname = new System.Windows.Forms.Label();
+            this.panelNewEmployee.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // panelNewEmployee
+            // 
+            this.panelNewEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(56)))));
+            this.panelNewEmployee.Controls.Add(this.textBoxNewCodeTypSes);
+            this.panelNewEmployee.Controls.Add(this.Labelname);
+            this.panelNewEmployee.Controls.Add(this.label2);
+            this.panelNewEmployee.Controls.Add(this.textBoxNewDesignation);
+            this.panelNewEmployee.Controls.Add(this.AddNewCommuneSauvegarder);
+            this.panelNewEmployee.Location = new System.Drawing.Point(102, 98);
+            this.panelNewEmployee.Name = "panelNewEmployee";
+            this.panelNewEmployee.Size = new System.Drawing.Size(394, 368);
+            this.panelNewEmployee.TabIndex = 44;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(56)))));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(129, 142);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 15);
+            this.label2.TabIndex = 74;
+            this.label2.Text = "Designation";
+            // 
+            // textBoxNewDesignation
+            // 
+            this.textBoxNewDesignation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNewDesignation.Location = new System.Drawing.Point(131, 164);
+            this.textBoxNewDesignation.MaxLength = 30;
+            this.textBoxNewDesignation.Multiline = true;
+            this.textBoxNewDesignation.Name = "textBoxNewDesignation";
+            this.textBoxNewDesignation.Size = new System.Drawing.Size(135, 38);
+            this.textBoxNewDesignation.TabIndex = 72;
+            this.textBoxNewDesignation.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNewNomWilaya_KeyPress);
+            // 
+            // AddNewCommuneSauvegarder
+            // 
+            this.AddNewCommuneSauvegarder.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.AddNewCommuneSauvegarder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(146)))), ((int)(((byte)(39)))));
+            this.AddNewCommuneSauvegarder.FlatAppearance.BorderSize = 0;
+            this.AddNewCommuneSauvegarder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddNewCommuneSauvegarder.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddNewCommuneSauvegarder.Location = new System.Drawing.Point(149, 273);
+            this.AddNewCommuneSauvegarder.Name = "AddNewCommuneSauvegarder";
+            this.AddNewCommuneSauvegarder.Size = new System.Drawing.Size(97, 30);
+            this.AddNewCommuneSauvegarder.TabIndex = 24;
+            this.AddNewCommuneSauvegarder.Text = "Sauvegarder";
+            this.AddNewCommuneSauvegarder.UseVisualStyleBackColor = false;
+            this.AddNewCommuneSauvegarder.Click += new System.EventHandler(this.AddNewCommuneSauvegarder_Click);
+            // 
+            // textBoxNewCodeTypSes
+            // 
+            this.textBoxNewCodeTypSes.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.textBoxNewCodeTypSes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNewCodeTypSes.Location = new System.Drawing.Point(132, 92);
+            this.textBoxNewCodeTypSes.MaxLength = 6;
+            this.textBoxNewCodeTypSes.Name = "textBoxNewCodeTypSes";
+            this.textBoxNewCodeTypSes.Size = new System.Drawing.Size(134, 21);
+            this.textBoxNewCodeTypSes.TabIndex = 75;
+            this.textBoxNewCodeTypSes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNewCodeTypSes_KeyPress);
+            // 
+            // Labelname
+            // 
+            this.Labelname.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.Labelname.AutoSize = true;
+            this.Labelname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(56)))));
+            this.Labelname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Labelname.ForeColor = System.Drawing.Color.White;
+            this.Labelname.Location = new System.Drawing.Point(128, 69);
+            this.Labelname.Name = "Labelname";
+            this.Labelname.Size = new System.Drawing.Size(123, 15);
+            this.Labelname.TabIndex = 76;
+            this.Labelname.Text = "Code de type session";
+            // 
+            // A_AddTypeDeSessionForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(24)))), ((int)(((byte)(36)))));
+            this.ClientSize = new System.Drawing.Size(599, 572);
+            this.Controls.Add(this.panelNewEmployee);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "A_AddTypeDeSessionForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Nouveau type de session";
+            this.panelNewEmployee.ResumeLayout(false);
+            this.panelNewEmployee.PerformLayout();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel panelNewEmployee;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBoxNewDesignation;
+        private System.Windows.Forms.Button AddNewCommuneSauvegarder;
+        private System.Windows.Forms.TextBox textBoxNewCodeTypSes;
+        private System.Windows.Forms.Label Labelname;
+    }
+}

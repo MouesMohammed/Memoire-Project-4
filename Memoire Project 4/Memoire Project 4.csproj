@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5DB350AA-EEC9-4673-9950-B08730054B45}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Memoire_Project_4</RootNamespace>
+    <AssemblyName>Memoire Project 4</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon_256_ico.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.14.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.14.0\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.3.2, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.2\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.2.6\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.2.6\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.28\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.28\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ZstdNet, Version=1.4.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.28\lib\net452\ZstdNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_AddCommuneForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_AddCommuneForm.Designer.cs">
+      <DependentUpon>A_AddCommuneForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_AddAyantDroitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_AddAyantDroitForm.Designer.cs">
+      <DependentUpon>A_AddAyantDroitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_AddTypeDeSessionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_AddTypeDeSessionForm.Designer.cs">
+      <DependentUpon>A_AddTypeDeSessionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_AddWilayaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_AddWilayaForm.Designer.cs">
+      <DependentUpon>A_AddWilayaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Commune_WilayaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Commune_WilayaForm.Designer.cs">
+      <DependentUpon>A_Commune_WilayaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_AddSejourForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_AddSejourForm.Designer.cs">
+      <DependentUpon>A_AddSejourForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_SejourManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_SejourManagementForm.Designer.cs">
+      <DependentUpon>A_SejourManagementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_TypeDeSessionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_TypeDeSessionForm.Designer.cs">
+      <DependentUpon>A_TypeDeSessionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="E_DownloadDeamande.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="E_DownloadDeamande.Designer.cs">
+      <DependentUpon>E_DownloadDeamande.cs</DependentUpon>
+    </Compile>
+    <Compile Include="E_DownloadOrPrintMessageDemande.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="E_DownloadOrPrintMessageDemande.Designer.cs">
+      <DependentUpon>E_DownloadOrPrintMessageDemande.cs</DependentUpon>
+    </Compile>
+    <Compile Include="E_InscrireAyantDroitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="E_InscrireAyantDroitForm.Designer.cs">
+      <DependentUpon>E_InscrireAyantDroitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_AyantDroitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_AyantDroitForm.Designer.cs">
+      <DependentUpon>A_AyantDroitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_AyantDroitPrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_AyantDroitPrintForm.Designer.cs">
+      <DependentUpon>A_AyantDroitPrintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_InscriptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_InscriptionForm.Designer.cs">
+      <DependentUpon>A_InscriptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="E_InscrireAyantDroitMessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="E_InscrireAyantDroitMessageForm.Designer.cs">
+      <DependentUpon>E_InscrireAyantDroitMessageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="E_MesAyantsDroit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="E_MesAyantsDroit.Designer.cs">
+      <DependentUpon>E_MesAyantsDroit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="E_MesInscriptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="E_MesInscriptionForm.Designer.cs">
+      <DependentUpon>E_MesInscriptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="E_SejoursForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="E_SejoursForm.Designer.cs">
+      <DependentUpon>E_SejoursForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_EmployeesManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_EmployeesManagementForm.Designer.cs">
+      <DependentUpon>A_EmployeesManagementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="E_InscrireMessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="E_InscrireMessageForm.Designer.cs">
+      <DependentUpon>E_InscrireMessageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogimForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogimForm.Designer.cs">
+      <DependentUpon>LogimForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeForm.Designer.cs">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewEmployeeRegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewEmployeeRegistrationForm.Designer.cs">
+      <DependentUpon>NewEmployeeRegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SejoursForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SejoursForm.Designer.cs">
+      <DependentUpon>SejoursForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="E_SejourInscrireForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="E_SejourInscrireForm.Designer.cs">
+      <DependentUpon>E_SejourInscrireForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sonelgaz_data_baseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sonelgaz_data_baseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sonelgaz_data_baseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sonelgaz_data_baseDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sonelgaz_data_baseDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sonelgaz_data_baseDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sonelgaz_data_baseDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sonelgaz_data_baseDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sonelgaz_data_baseDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sonelgaz_data_baseDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sonelgaz_data_baseDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sonelgaz_data_baseDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sonelgaz_data_baseDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sonelgaz_data_baseDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sonelgaz_data_baseDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sonelgaz_data_baseDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sonelgaz_data_baseDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sonelgaz_data_baseDataSet8.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_AddCommuneForm.resx">
+      <DependentUpon>A_AddCommuneForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_AddAyantDroitForm.resx">
+      <DependentUpon>A_AddAyantDroitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_AddTypeDeSessionForm.resx">
+      <DependentUpon>A_AddTypeDeSessionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_AddWilayaForm.resx">
+      <DependentUpon>A_AddWilayaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Commune_WilayaForm.resx">
+      <DependentUpon>A_Commune_WilayaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_AddSejourForm.resx">
+      <DependentUpon>A_AddSejourForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_SejourManagementForm.resx">
+      <DependentUpon>A_SejourManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_TypeDeSessionForm.resx">
+      <DependentUpon>A_TypeDeSessionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="E_DownloadDeamande.resx">
+      <DependentUpon>E_DownloadDeamande.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="E_DownloadOrPrintMessageDemande.resx">
+      <DependentUpon>E_DownloadOrPrintMessageDemande.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="E_InscrireAyantDroitForm.resx">
+      <DependentUpon>E_InscrireAyantDroitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_AyantDroitForm.resx">
+      <DependentUpon>A_AyantDroitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_AyantDroitPrintForm.resx">
+      <DependentUpon>A_AyantDroitPrintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_InscriptionForm.resx">
+      <DependentUpon>A_InscriptionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="E_InscrireAyantDroitMessageForm.resx">
+      <DependentUpon>E_InscrireAyantDroitMessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="E_MesAyantsDroit.resx">
+      <DependentUpon>E_MesAyantsDroit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="E_MesInscriptionForm.resx">
+      <DependentUpon>E_MesInscriptionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="E_SejoursForm.resx">
+      <DependentUpon>E_SejoursForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_EmployeesManagementForm.resx">
+      <DependentUpon>A_EmployeesManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="E_InscrireMessageForm.resx">
+      <DependentUpon>E_InscrireMessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogimForm.resx">
+      <DependentUpon>LogimForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeForm.resx">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewEmployeeRegistrationForm.resx">
+      <DependentUpon>NewEmployeeRegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SejoursForm.resx">
+      <DependentUpon>SejoursForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="E_SejourInscrireForm.resx">
+      <DependentUpon>E_SejourInscrireForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="sonelgaz_data_baseDataSet.xsc">
+      <DependentUpon>sonelgaz_data_baseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="sonelgaz_data_baseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sonelgaz_data_baseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sonelgaz_data_baseDataSet.xss">
+      <DependentUpon>sonelgaz_data_baseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="sonelgaz_data_baseDataSet1.xsc">
+      <DependentUpon>sonelgaz_data_baseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="sonelgaz_data_baseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sonelgaz_data_baseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sonelgaz_data_baseDataSet1.xss">
+      <DependentUpon>sonelgaz_data_baseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="sonelgaz_data_baseDataSet2.xsc">
+      <DependentUpon>sonelgaz_data_baseDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="sonelgaz_data_baseDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sonelgaz_data_baseDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sonelgaz_data_baseDataSet2.xss">
+      <DependentUpon>sonelgaz_data_baseDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="sonelgaz_data_baseDataSet3.xsc">
+      <DependentUpon>sonelgaz_data_baseDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="sonelgaz_data_baseDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sonelgaz_data_baseDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sonelgaz_data_baseDataSet3.xss">
+      <DependentUpon>sonelgaz_data_baseDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="sonelgaz_data_baseDataSet4.xsc">
+      <DependentUpon>sonelgaz_data_baseDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="sonelgaz_data_baseDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sonelgaz_data_baseDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sonelgaz_data_baseDataSet4.xss">
+      <DependentUpon>sonelgaz_data_baseDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="sonelgaz_data_baseDataSet5.xsc">
+      <DependentUpon>sonelgaz_data_baseDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="sonelgaz_data_baseDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sonelgaz_data_baseDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sonelgaz_data_baseDataSet5.xss">
+      <DependentUpon>sonelgaz_data_baseDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="sonelgaz_data_baseDataSet6.xsc">
+      <DependentUpon>sonelgaz_data_baseDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="sonelgaz_data_baseDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sonelgaz_data_baseDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sonelgaz_data_baseDataSet6.xss">
+      <DependentUpon>sonelgaz_data_baseDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="sonelgaz_data_baseDataSet7.xsc">
+      <DependentUpon>sonelgaz_data_baseDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="sonelgaz_data_baseDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sonelgaz_data_baseDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sonelgaz_data_baseDataSet7.xss">
+      <DependentUpon>sonelgaz_data_baseDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="sonelgaz_data_baseDataSet8.xsc">
+      <DependentUpon>sonelgaz_data_baseDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="sonelgaz_data_baseDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sonelgaz_data_baseDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sonelgaz_data_baseDataSet8.xss">
+      <DependentUpon>sonelgaz_data_baseDataSet8.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon_256_ico.ico" />
+    <None Include="Resources\Refresh5.png" />
+    <None Include="Resources\Refresh4.png" />
+    <None Include="Resources\Refresh3.png" />
+    <None Include="Resources\Refresh-2.png" />
+    <None Include="Resources\Refrech.png" />
+    <None Include="Resources\Agent1.png" />
+    <None Include="Resources\Extrait.png" />
+    <None Include="Resources\Location.png" />
+    <None Include="Resources\Tarifs.png" />
+    <None Include="Resources\EtatRub.png" />
+    <None Include="Resources\TypeDeSession.png" />
+    <None Include="Resources\132.png" />
+    <None Include="Resources\Inscription_3.png" />
+    <None Include="Resources\Inscription_2.png" />
+    <None Include="Resources\Inscription_321.png" />
+    <None Include="Resources\Login1.png" />
+    <None Include="Resources\Search_23.png" />
+    <None Include="Resources\Search_25.png" />
+    <None Include="Resources\Search_29.png" />
+    <None Include="Resources\Search_Blue_32.png" />
+    <None Include="Resources\Search_32.png" />
+    <None Include="Resources\Sejour_2_23.png" />
+    <None Include="Resources\Sejour_23.png" />
+    <None Include="Resources\Icon_256.png" />
+    <None Include="Resources\Close_23.png" />
+    <None Include="Resources\251.png" />
+    <None Include="Resources\23.png" />
+    <None Include="Resources\25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
